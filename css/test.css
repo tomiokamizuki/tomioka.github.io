@@ -1,0 +1,108 @@
+/*リンクの色変更*/
+a:link    { color: #0066FF; }
+a:visited { color: #FF6600; }
+
+#button {
+	display: flex;
+	flex-direction: row;
+	margin-top: 8px;
+	margin-bottom: 4px;
+}
+#button img{
+  margin-left: 20px;
+  width: 32px;
+}
+
+/*検索エンジン全体*/
+#search {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 8px 0px;
+}
+
+/*検索エンジン内*/
+#search .item {
+	padding: 8px 8px 4px;
+	border: 1px #CCCCCC solid;
+	background-color: #DDEECC;
+	border-radius: 6px;
+	opacity: 0.90;
+
+	flex: 1 1 256px;
+}
+
+/*検索エンジン同士のスペース*/
+#search .space {
+	flex-basis: 8px;
+}
+
+#search .form {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+/*右へ余白を作る*/
+#search .form .icon{
+	padding-right: 6px;
+}
+
+/*検索エンジン入力部分*/
+#search .form .text{
+	margin-top: 5px;
+	flex: 1 1 128px;
+}
+
+/*検索エンジン入力部分の大きさ*/
+#search .form .text input{
+	width: 97%;
+  height: 20px;
+}
+
+/*検索ボタン*/
+#search .form .button{
+	margin-top: 5px;
+}
+
+#lastBuildDate{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+  width: 440px;
+	height: 40px;
+	font-weight: bold;
+	padding-left: 15px;
+	padding-bottom: 10px;
+  border-radius: 6px;
+  border: 2px #CCCCCC solid;
+  background-color: #DDEECC;
+}
+
+/*変わることがない「最終更新」部分*/
+#lastBuildDate .constText{
+	margin-top: 10px;
+}
+
+/*最終更新日時*/
+#lastBuildDate .dateText{
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+/*更新ボタン*/
+#lastBuildDate .reload{
+	margin-left: 25px;
+	margin-top: 10px;
+}
+
+/*ニュース表示部分*/
+#news{
+  border-radius: 6px;
+  border: 1px #CCCCCC solid;
+  background-color: #DDEECC;
+}
+
+/*ニューステキスト*/
+#news .newsText{
+	margin-left: -30px;
+}

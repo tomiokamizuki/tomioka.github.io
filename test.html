@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>テスト</title>
+<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+
+<link rel="stylesheet" href="css/jquery.zrssfeed.css" type="text/css" />
+<link rel="stylesheet" href="css/test.css" type="text/css" />
+
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src='js/rss.js'></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	/**
+	 * リンクボタンの設置
+	 */
+	$( "#button" ).linkBox( {
+		data: {
+      "C#":{
+        url:"https://docs.microsoft.com/ja-jp/dotnet/csharp/language-reference/",
+        img:"csharp.png",
+        title:"C#",
+      },
+      "C++":{
+        url:"https://cpprefjp.github.io/implementation.html",
+        img:"C+.png",
+        title:"C++"
+      },
+      "Niconico":{
+        url:"https://www.nicovideo.jp/",
+        img:"Niconico.png",
+        title:"Niconico",
+      },
+      "Youtube":{
+        url:"https://www.youtube.com/?gl=JP",
+        img:"Youtube.png",
+        title:"Youtube",
+      },
+			"Amazon" : {
+				url: "https://www.amazon.co.jp/?&tag=shihoriwish-22&linkCode=wsw",
+				img: "amazon.png",
+				title: "Amazon",
+			},
+		}
+	});
+
+});
+</script>
+</head>
+
+<body>
+  <!-- リンクボタン -->
+  <div id="button">
+  </div>
+
+  <!-- 検索 -->
+  <!-- Google-->
+  <div id="search">
+    <div class="item">
+      <form method="get" action="https://www.google.co.jp/search" target="_blank">
+        <input type="hidden" name="ie" value="UTF-8">
+        <input type="hidden" name="oe" value="UTF-8">
+        <input type="hidden" name="hl" value="ja">
+        <div class="form">
+          <div class="icon"><img src="https://www.google.co.jp/favicon.ico" width="32" /></div>
+          <div class="text"><input type="text" name="q" maxlength="255" value=""></div>
+          <div class="button"><input type="submit" name=btnG value="検索"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="space"></div>
+
+<!--Yahoo-->
+      <div class="item">
+        <form method="get" action="https://search.yahoo.co.jp/" target="_blank">
+          <input type="hidden" name="fr" value="ysiw">
+          <input type="hidden" name="ei" value="▲▲▲">
+          <div class="form">
+            <div class="icon"><img src="https://www.yahoo.co.jp//favicon.ico" width="32" /></div>
+            <div class="text"><input type="text" name="q" value=""></div>
+            <div class="button"><input type="submit" name=btnY value="検索"></div>
+          </div>
+        </form>
+      </div>
+
+      <div class="space"></div>
+
+    <!-- wikipedia -->
+    <div class="item">
+      <form action="https://ja.wikipedia.org/w/index.php" target="_blank">
+        <div class="form">
+          <div class="icon"><img src="https://ja.wikipedia.org/favicon.ico" width="32" /></div>
+          <div class="text"><input type="search" name="search" /></div>
+          <div class="button">
+            <input type="submit" name="fulltext" value="全文" />
+            <input type="submit" name="go" value="単語" />
+          </div>
+        </div>
+    </div>
+    </form>
+
+    <div class="space"></div>
+
+    <!-- Amazon-->
+    <div class="item">
+      <form method="get" action="https://www.amazon.co.jp/gp/search" target="_blank">
+        <div class="form">
+          <div class="icon"><img src="https://www.amazon.co.jp/favicon.ico" width="32" /></div>
+          <div class="text"><input name="keywords" type="text" /></div>
+          <div class="button">
+            <input name="submit" type="submit" value="検索" />
+            <input type="hidden" name="tag" value="shihoriwish-22" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+<!--ニュースの更新-->
+<div id="lastBuildDate">
+	<div class="constText"><p>GoogleNews　最終更新</p></div>
+
+	<div class="dateText"></div>
+
+	<div class="reload"><button>更新</button></div>
+</div>
+
+<!--ニュース表示-->
+<div id="news">
+	<div class="newsText"></div>
+</div>
+</body>
+</html>
